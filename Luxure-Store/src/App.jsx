@@ -1,15 +1,12 @@
 import Presentation from "./components/presentation/Presentation"
-
-import './App.css'
+import AboutUs from "./components/aboutus/AboutUs"
 
 function App() {
 
     return (
-        <div className="container">
-            <div className="blur"></div>
-                <div className="content">
-                    <Presentation />
-            </div>
+        <div>
+            <Presentation />
+            <AboutUs />
         </div>
     )
 }
