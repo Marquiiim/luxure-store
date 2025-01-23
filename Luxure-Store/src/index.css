@@ -1,0 +1,12 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  background-image: url(./assets/img/LuxureWPP.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
