@@ -1,4 +1,4 @@
-@keyframes slide-in-img-r {
+@keyframes slideInImgRight {
     from {
         opacity: 0;
         transform: translateX(200px) rotate(30deg);
@@ -10,7 +10,7 @@
     }
 }
 
-@keyframes slide-in-txt-r {
+@keyframes slideInTxtRight {
     from {
         opacity: 0;
         transform: translateX(200px);
@@ -22,7 +22,7 @@
     }
 }
 
-@keyframes slide-in-img-l {
+@keyframes slideInImgLeft {
     from {
         opacity: 0;
         transform: translateX(-200px) rotate(-30deg);
@@ -34,7 +34,7 @@
     }
 }
 
-@keyframes slide-in-txt-l {
+@keyframes slideInTxtLeft {
     from {
         opacity: 0;
         transform: translateX(-200px);
@@ -43,5 +43,17 @@
     to {
         opacity: 1;
         transform: translateX(0px);
+    }
+}
+
+@keyframes slideInTitle {
+    from {
+        opacity: 0;
+        transform: translateY(-120px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(0px);
     }
 }

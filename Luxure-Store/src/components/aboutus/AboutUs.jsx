@@ -9,6 +9,10 @@ function AboutUs() {
     return (
         <section className={styles.container}>
             <div className={styles.content}>
+                <div className={styles.division}></div>
+                <h1>
+                    Quem somos nós?
+                </h1>
                 <div className={styles.top_info}>
                     <div className={styles.text_left}>
                         <p>
@@ -17,6 +21,9 @@ function AboutUs() {
                     </div>
                     <img src={RelogioTop} />
                 </div>
+
+                
+
                 <div className={styles.bottom_info}>
                     <img src={RelogioBottom} />
                     <div className={styles.text_right}>

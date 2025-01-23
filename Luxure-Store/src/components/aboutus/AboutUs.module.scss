@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: center;
     font-family: "Yanone Kaffeesatz", serif;
-    margin-top: 1rem;
 
     .content {
         display: flex;
@@ -14,6 +13,17 @@
         z-index: 2;
         height: 100vh;
         width: 100%;
+
+        & h1 {
+            position: inherit;
+            text-align: center;
+            top: 7%;
+            font-size: 3rem;
+            color: white;
+            animation: slideInTitle 1.5s ease-in-out forwards;
+            animation-timeline: view();
+            opacity: 0;
+        }
 
 
         & .top_info {
@@ -30,7 +40,7 @@
                     max-width: 800px;
                     font-size: 2rem;
                     color: white;
-                    animation: slide-in-txt-l 1.5s ease-out forwards;
+                    animation: slideInTxtLeft 1.5s ease-out forwards;
                     animation-timeline: view();
                     animation-range: entry 0%;
                     opacity: 0;
@@ -42,10 +52,18 @@
                 height: 350px;
                 transform: rotate(15deg);
                 width: auto;
-                animation: slide-in-img-r 1.5s ease-out forwards;
+                animation: slideInImgRight 1.5s ease-out forwards;
                 animation-timeline: view();
                 animation-range: entry 0%;
             }
+        }
+
+        & .division {
+            position: absolute;
+            top: 49%;
+            width: 50%;
+            height: 0.7px;
+            background-color: white;
         }
 
         & .bottom_info {
@@ -62,7 +80,7 @@
                     max-width: 800px;
                     font-size: 2rem;
                     color: white;
-                    animation: slide-in-txt-r 1.5s ease-out forwards;
+                    animation: slideInTxtRight 1.5s ease-out forwards;
                     animation-timeline: view();
                     animation-range: entry 0%;
                     opacity: 0;
@@ -73,7 +91,7 @@
                 height: 350px;
                 transform: rotate(-15deg);
                 width: auto;
-                animation: slide-in-img-l 1.5s ease-out forwards;
+                animation: slideInImgLeft 1.5s ease-out forwards;
                 animation-timeline: view();
                 animation-range: entry 0%;
             }
