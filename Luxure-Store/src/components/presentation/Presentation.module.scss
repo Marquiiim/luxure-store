@@ -20,7 +20,7 @@
             height: 40rem;
             filter: brightness(0) invert(1);
             pointer-events: none;
-            transition: slide-in 0.4s ease-in-out;
+            animation: slide-in 1.3s ease-in-out forwards;
         }
 
         & p {
@@ -28,6 +28,9 @@
             top: -200px;
             color: white;
             font-family: "Lexend Giga", serif;
+            opacity: 0;
+            animation: slide-in 1.3s ease-in-out forwards;
+            animation-delay: 0.9s;
         }
     }
 }
