@@ -1,0 +1,24 @@
+.container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    
+    & .blur {
+        position: absolute;
+        background-image: url(./assets/img/LuxureWPP.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: blur(6px);
+        z-index: 1;
+
+        & .content {
+            position: relative;
+        }
+    }
+}

@@ -1,10 +1,15 @@
-import Presentation from "./components/Presentation"
+import Presentation from "./components/presentation/Presentation"
+
+import './App.css'
 
 function App() {
 
-    return(
-        <div>
-            <Presentation />
+    return (
+        <div className="container">
+            <div className="blur"></div>
+                <div className="content">
+                    <Presentation />
+            </div>
         </div>
     )
 }

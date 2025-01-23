@@ -1,8 +1,11 @@
+@import url(./animation/_animation.scss);
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  z-index: 2;
   height: 100vh;
 }
 .container .content {
@@ -16,6 +19,7 @@
   height: 40rem;
   filter: brightness(0) invert(1);
   pointer-events: none;
+  transition: slide-in 0.4s ease-in-out;
 }
 .container .content p {
   position: relative;
