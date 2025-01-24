@@ -6,8 +6,8 @@ function Presentation() {
 
     return (
         <section className={styles.container}>
+            <div className={styles.blur}></div>
             <div className={styles.content}>
-                <div className="blur"></div>
                 <img src={Luxure} alt='Luxure' />
                 <p>Tradução de elegância e qualidade.</p>
             </div>
