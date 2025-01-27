@@ -1,5 +1,6 @@
 import Presentation from "./components/presentation/Presentation"
 import AboutUs from "./components/aboutus/AboutUs"
+import Catalog from "./components/catalog/Catalog"
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
         <div>
             <Presentation />
             <AboutUs />
+            <Catalog />
         </div>
     )
 }

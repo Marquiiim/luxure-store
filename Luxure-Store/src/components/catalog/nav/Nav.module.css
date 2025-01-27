@@ -1,0 +1,16 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+nav h1 {
+  font-size: 2.5rem;
+}
+nav div span {
+  padding: 1rem;
+  transition: border 0.3s ease-in-out;
+}
+nav div span:hover {
+  border-bottom: 2px solid rgba(0, 191, 255, 0.5960784314);
+}/*# sourceMappingURL=Nav.module.css.map */

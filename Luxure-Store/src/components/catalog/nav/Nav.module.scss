@@ -1,0 +1,22 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    & div {
+
+        & span {
+            padding: 1rem;
+            transition: border 0.3s ease-in-out;
+
+            &:hover {
+                border-bottom: 2px solid #00bfff98;
+            }
+        }
+    }
+}
