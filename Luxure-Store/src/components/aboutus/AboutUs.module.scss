@@ -1,12 +1,12 @@
-@import url(./animation/_animation.scss);
-
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
     font-family: "Oswald", serif;
     height: 100vh;
+    width: 100%;
 
     & .blur_aboutus {
         background-image: url('../../assets/img/LuxureWPP2.jpg');
@@ -44,10 +44,6 @@
                     max-width: 800px;
                     font-size: 1.7rem;
                     color: white;
-                    opacity: 0;
-                    animation: slideInTxtLeft 2s ease-in-out forwards;
-                    animation-timeline: view();
-                    animation-range: entry 0%;
 
                     & span {
                         font-weight: bold;
@@ -60,11 +56,7 @@
                 height: 290px;
                 width: auto;
                 transform: rotate(15deg);
-                opacity: 0;
                 filter: drop-shadow(0px 0px 80px #00bfff98);
-                animation: slideInImgRight 2s ease-in-out forwards;
-                animation-timeline: view();
-                animation-range: entry 0%;
             }
         }
 
@@ -90,10 +82,6 @@
                     max-width: 800px;
                     font-size: 1.7rem;
                     color: white;
-                    opacity: 0;
-                    animation: slideInTxtRight 2s ease-in-out forwards;
-                    animation-timeline: view();
-                    animation-range: entry 0%;
 
                     & span {
                         font-weight: bold;
@@ -107,9 +95,6 @@
                 width: auto;
                 transform: rotate(-15deg);
                 filter: drop-shadow(0px 0px 80px #00bfff98);
-                animation: slideInImgLeft 2s ease-in-out forwards;
-                animation-timeline: view();
-                animation-range: entry 0%;
             }
         }
     }
