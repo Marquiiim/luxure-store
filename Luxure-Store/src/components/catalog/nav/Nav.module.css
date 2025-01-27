@@ -19,6 +19,7 @@ nav .title_nav h1 {
 nav .cart {
   position: absolute;
   left: 300px;
+  width: 130px;
 }
 nav .cart span {
   display: flex;

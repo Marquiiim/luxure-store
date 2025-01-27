@@ -1,6 +1,10 @@
 import styles from './Block.module.css'
 
-function Block({ name, value, promo, img }) {
+function Block({ name, value, promo, img, addToCart }) {
+    const handleAddToCar = () => {
+        const item = { name, value, promo, img }
+        addToCart(item)
+    }
 
     return (
         <div className={styles.content}>
@@ -16,7 +20,7 @@ function Block({ name, value, promo, img }) {
                     R${value}<span>,90</span>
                 </span>
             </div>
-            <button>Adicionar ao carrinho</button>
+            <button onClick={handleAddToCar}>Adicionar ao carrinho</button>
         </div>
     )
 }
