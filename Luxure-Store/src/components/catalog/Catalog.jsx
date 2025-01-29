@@ -8,7 +8,6 @@ import RelogioLuxure2 from '../../assets/img/RelógioLuxure2.png'
 import RelogioLuxure3 from '../../assets/img/RelógioLuxure3.png'
 
 function Catalog({ cart, addToCart, openCart }) {
-
     return (
         <section className={styles.container}>
             <div className={styles.blur_catalog}></div>

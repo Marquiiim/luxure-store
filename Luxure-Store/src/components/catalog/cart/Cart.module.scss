@@ -1,20 +1,155 @@
 .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 1000;
+    background-color: rgb(230, 230, 230);
+    font-family: "Poppins", serif;
+
+    & h2 {
+        font-size: 2rem;
+    }
 
     & .modal_content {
-        background-color: white;
-        padding: 20px;
-        border-radius: 5px;
-        width: 300px;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-height: 90vh;
+        padding: 2rem;
+        gap: 3rem;
+
+        & p {
+            color: red;
+            background-color: rgba(255, 0, 0, 0.279);
+            border-radius: .5rem;
+            padding: .8rem;
+            font-weight: bold;
+        }
+
+        & .products {
+            background-color: rgb(255, 255, 255);
+            padding: 2rem;
+            border-radius: .5rem;
+            width: 70%;
+            max-height: 80vh;
+            overflow-y: auto;
+            text-align: center;
+
+            & .list_products {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                & .info_list {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 100%;
+                    list-style: none;
+                    
+                    & li {
+                        color: rgb(168, 168, 168);
+                        font-weight: bold;
+                    }
+                }
+
+                & .product {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    list-style: none;
+                    padding-bottom: 1.5rem;
+                    border-bottom: 1.5px solid rgb(230, 230, 230);
+
+                    & .characteristics {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        width: 100%;
+
+                        & .name {
+                            font-weight: 400;
+                        }
+
+
+                        & .amount {
+                            padding: .5rem;
+                            border-radius: .3rem;
+                            width: 3rem;
+                            border: 1px solid rgb(230, 230, 230);
+                            font-weight: bold;
+                            text-align: center;
+                        }
+
+                        & .value {
+                            font-weight: bold;
+                        }
+
+                        & .trash {
+                            color: rgb(168, 168, 168);
+                            cursor: pointer;
+    
+                            &:hover {
+                                color: red;
+                            }
+    
+                            &:active {
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+
+
+                    & img {
+                        height: auto;
+                        width: 60px;
+                    }
+                }
+            }
+        }
+
+        & .buy {
+            background-color: rgb(255, 255, 255);
+            padding: 2rem;
+            border-radius: .5rem;
+            width: 30%;
+            max-height: 50vh;
+
+            & .actions_cart {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                margin-top: 2rem;
+
+                & button {
+                    background-color: #00bfff98;
+                    color: white;
+                    padding: .7rem;
+                    border-radius: .7rem;
+                    border: none;
+                    font-weight: bold;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.9;
+                    }
+
+                    &:active {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+        }
+
+
     }
 }
