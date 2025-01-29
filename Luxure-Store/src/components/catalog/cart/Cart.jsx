@@ -46,7 +46,7 @@ function Cart({ cart, closeCart }) {
                         ) : (
                             <div className={styles.values}>
                                 <span className={styles.promotion}>
-                                    Na compra de mais de dois produtos, o segundo sai <span>20% mais barato</span>
+                                    Na compra de dois produtos, o segundo sai <span>20% mais barato</span>
                                 </span>
                                 <span className={styles.total}>
                                     <span>Valor total:</span> <span className={styles.total_payable}>R$</span>
