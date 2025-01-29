@@ -1,6 +1,7 @@
 import styles from './Cart.module.css'
 
 import { FaTrashAlt } from "react-icons/fa";
+import { FaExclamation } from "react-icons/fa";
 
 function Cart({ cart, closeCart }) {
 
@@ -39,11 +40,26 @@ function Cart({ cart, closeCart }) {
                     )}
                 </div>
                 <div className={styles.buy}>
+                    <div className={styles.final_value}>
+                        {cart.length === 0 ? (
+                            <p>Seu carrinho está vazio.</p>
+                        ) : (
+                            <div className={styles.values}>
+                                <span className={styles.promotion}>
+                                    Na compra de mais de dois produtos, o segundo sai <span>20% mais barato</span>
+                                </span>
+                                <span className={styles.total}>
+                                    <span>Valor total:</span> <span className={styles.total_payable}>R$</span>
+                                </span>
+                            </div>
+                        )}
+                    </div>
                     <div className={styles.actions_cart}>
                         <button onClick={closeCart}>Voltar</button>
                         {cart.length === 0 ? '' :
                             <button>Finalizar compra</button>}
                     </div>
+                    <span className={styles.help}>A compra é finalizada com atendente<FaExclamation /></span>
                 </div>
             </div>
         </div>

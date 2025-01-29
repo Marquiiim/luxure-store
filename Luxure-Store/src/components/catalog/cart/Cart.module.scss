@@ -30,6 +30,7 @@
             background-color: rgba(255, 0, 0, 0.279);
             border-radius: .5rem;
             padding: .8rem;
+            text-align: center;
             font-weight: bold;
         }
 
@@ -53,7 +54,7 @@
                     justify-content: space-around;
                     width: 100%;
                     list-style: none;
-                    
+
                     & li {
                         color: rgb(168, 168, 168);
                         font-weight: bold;
@@ -95,17 +96,16 @@
                         & .trash {
                             color: rgb(168, 168, 168);
                             cursor: pointer;
-    
+
                             &:hover {
                                 color: red;
                             }
-    
+
                             &:active {
                                 opacity: 0.8;
                             }
                         }
                     }
-
 
                     & img {
                         height: auto;
@@ -122,12 +122,41 @@
             width: 30%;
             max-height: 50vh;
 
+            & .values {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                & .promotion {
+                    text-align: center;
+
+                    & span {
+                        color: #00bfff98;
+                        font-weight: bold;
+                    }
+                }
+
+                & .total {
+                    color: #00bfff98;
+                    font-weight: bold;
+
+                    & span {
+                        font-weight: bold;
+                    }
+
+                    & .total_payable {
+                        font-weight: 500;
+                        color: black;
+                    }
+                }
+            }
+
             & .actions_cart {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 1rem;
-                margin-top: 2rem;
+                margin-top: 4rem;
 
                 & button {
                     background-color: #00bfff98;
@@ -148,8 +177,15 @@
                 }
             }
 
+            .help {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: .6rem;
+                font-size: .8rem;
+                color: rgb(159, 159, 159);
+
+            }
         }
-
-
     }
 }
