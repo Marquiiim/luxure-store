@@ -6,6 +6,10 @@ function Block({ name, value, promo, img, addToCart }) {
         addToCart(item)
     }
 
+    const convertValue = (value) => {
+        return value.toString().replace(".", ",")
+    }
+
     return (
         <div className={styles.content}>
             <img src={img} />
@@ -14,10 +18,10 @@ function Block({ name, value, promo, img, addToCart }) {
                     {name}
                 </h3>
                 <span className={styles.promotion}>
-                    <p><span>de {promo},90</span> por:</p>
+                    <p><span>de {promo}</span> por:</p>
                 </span>
                 <span className={styles.price}>
-                    R${value}<span>,90</span>
+                    R${convertValue(value)}
                 </span>
             </div>
             <button onClick={handleAddToCar}>Adicionar ao carrinho</button>

@@ -105,36 +105,41 @@
   border-radius: 0.5rem;
   width: 30%;
   max-height: 50vh;
+  text-align: center;
 }
 .modal .modal_content .buy .values {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.modal .modal_content .buy .values .promotion {
-  text-align: center;
-}
 .modal .modal_content .buy .values .promotion span {
   color: rgba(0, 191, 255, 0.5960784314);
   font-weight: bold;
 }
 .modal .modal_content .buy .values .total {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   color: rgba(0, 191, 255, 0.5960784314);
+  font-size: 1.2rem;
   font-weight: bold;
 }
-.modal .modal_content .buy .values .total span {
+.modal .modal_content .buy .values .total .text_payable {
   font-weight: bold;
 }
-.modal .modal_content .buy .values .total .total_payable {
+.modal .modal_content .buy .values .total .text_payable .total_payable {
   font-weight: 500;
   color: black;
+}
+.modal .modal_content .buy .values .total .discount {
+  color: #0a9c03;
 }
 .modal .modal_content .buy .actions_cart {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 .modal .modal_content .buy .actions_cart button {
   background-color: rgba(0, 191, 255, 0.5960784314);
@@ -152,10 +157,6 @@
   opacity: 0.8;
 }
 .modal .modal_content .buy .help {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0.6rem;
   font-size: 0.8rem;
   color: rgb(159, 159, 159);
 }/*# sourceMappingURL=Cart.module.css.map */

@@ -3,7 +3,33 @@ import styles from './Cart.module.css'
 import { FaTrashAlt } from "react-icons/fa";
 import { FaExclamation } from "react-icons/fa";
 
-function Cart({ cart, closeCart }) {
+function Cart({ cart, closeCart, updateQuantity, removeToCart }) {
+
+    const convertValue = (value) => {
+        return new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+        }).format(value)
+    }
+
+    const valueDiscount = (cart) => {
+        let total = 0
+
+        cart.forEach((item) => {
+            const itemValue = Number(item.value)
+            const itemQuantity = Number(item.quantity)
+
+            if (itemQuantity >= 2) {
+                total += itemValue + (itemQuantity - 1) * (itemValue * 0.8)
+            } else {
+                total += itemValue
+            }
+        }, 0)
+        return total
+    }
+
+    const totalWithDiscount = valueDiscount(cart)
+
 
     return (
         <div className={styles.modal}>
@@ -30,9 +56,13 @@ function Cart({ cart, closeCart }) {
                                     <img src={item.img} />
                                     <div className={styles.characteristics}>
                                         <span className={styles.name}>{item.name}</span>
-                                        <input type='number' className={styles.amount} defaultValue='1' />
-                                        <span className={styles.value}>R${item.value},90</span>
-                                        <FaTrashAlt className={styles.trash} size='20' />
+                                        <input type='number'
+                                            className={styles.amount}
+                                            value={item.quantity}
+                                            min='1'
+                                            onChange={(e) => updateQuantity(index, parseInt(e.target.value))} />
+                                        <span className={styles.value}>{convertValue(item.value * item.quantity)}</span>
+                                        <FaTrashAlt onClick={removeToCart} className={styles.trash} size='20' />
                                     </div>
                                 </li>
                             ))}
@@ -49,7 +79,10 @@ function Cart({ cart, closeCart }) {
                                     Na compra de dois produtos, o segundo sai <span>20% mais barato</span>
                                 </span>
                                 <span className={styles.total}>
-                                    <span>Valor total:</span> <span className={styles.total_payable}>R$</span>
+                                    <span className={styles.text_payable}>Valor total: <span className={styles.total_payable}>{convertValue(totalWithDiscount)}</span></span>
+                                    {cart.length >= 2 || cart.some(item => item.quantity >= 2) ? (
+                                        <span className={styles.discount}>Desconto de 20% adicionado</span>
+                                    ) : ''}
                                 </span>
                             </div>
                         )}

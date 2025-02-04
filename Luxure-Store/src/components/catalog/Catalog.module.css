@@ -32,7 +32,7 @@
 }
 .container .content .poedegar_deluxe_session {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   position: relative;
   gap: 1.5rem;
   z-index: 2;

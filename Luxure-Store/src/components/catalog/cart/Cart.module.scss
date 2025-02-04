@@ -121,6 +121,7 @@
             border-radius: .5rem;
             width: 30%;
             max-height: 50vh;
+            text-align: center;
 
             & .values {
                 display: flex;
@@ -128,7 +129,6 @@
                 gap: 2rem;
 
                 & .promotion {
-                    text-align: center;
 
                     & span {
                         color: #00bfff98;
@@ -137,16 +137,24 @@
                 }
 
                 & .total {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
                     color: #00bfff98;
+                    font-size: 1.2rem;
                     font-weight: bold;
 
-                    & span {
+                    & .text_payable {
                         font-weight: bold;
+
+                        & .total_payable {
+                            font-weight: 500;
+                            color: black;
+                        }
                     }
 
-                    & .total_payable {
-                        font-weight: 500;
-                        color: black;
+                    & .discount {
+                        color: #0a9c03;
                     }
                 }
             }
@@ -156,7 +164,7 @@
                 justify-content: center;
                 align-items: center;
                 gap: 1rem;
-                margin-top: 4rem;
+                margin-top: 2rem;
 
                 & button {
                     background-color: #00bfff98;
@@ -178,10 +186,6 @@
             }
 
             .help {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: .6rem;
                 font-size: .8rem;
                 color: rgb(159, 159, 159);
 

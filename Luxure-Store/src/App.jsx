@@ -11,7 +11,7 @@ function App() {
     const [showCart, setShowCart] = useState(false)
 
     const addToCart = (item) => {
-        setCart([...cart, item])
+        setCart([...cart, { ...item, quantity: 1 }])
     }
 
     const openCart = () => {
@@ -22,6 +22,20 @@ function App() {
         setShowCart(false)
     }
 
+    const removeToCart = (index) => {
+        setCart(prevCart => {
+            const newCart = [...prevCart]
+            newCart.splice(index, 1)
+            return newCart
+        })
+    }
+
+    const updateQuantity = (index, newQuantity) => {
+        const updateCart = [...cart]
+        updateCart[index].quantity = newQuantity
+        setCart(updateCart)
+    }
+
     return (
         <Router>
             <div>
@@ -29,7 +43,7 @@ function App() {
                 <AboutUs />
                 <Catalog cart={cart} addToCart={addToCart} openCart={openCart} />
 
-                {showCart && <Cart cart={cart} closeCart={closeCart} />}
+                {showCart && <Cart cart={cart} removeToCart={removeToCart} closeCart={closeCart} updateQuantity={updateQuantity} />}
             </div>
         </Router>
     )
