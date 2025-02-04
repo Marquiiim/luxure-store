@@ -132,6 +132,9 @@
   color: black;
 }
 .modal .modal_content .buy .values .total .discount {
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  background-color: rgba(11, 156, 3, 0.4588235294);
   color: #0a9c03;
 }
 .modal .modal_content .buy .actions_cart {
