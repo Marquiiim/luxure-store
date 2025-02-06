@@ -13,20 +13,31 @@ function Cart({ cart, closeCart, updateQuantity, removeToCart }) {
     }
 
     const valueDiscount = (cart) => {
-        let total = 0
+        let total = 0;
+        let totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
 
-        cart.forEach((item) => {
-            const itemValue = Number(item.value)
-            const itemQuantity = Number(item.quantity)
+        if (totalQuantity >= 2) {
+            let firstApplied = false;
 
-            if (itemQuantity >= 2) {
-                total += itemValue + (itemQuantity - 1) * (itemValue * 0.8)
-            } else {
-                total += itemValue
-            }
-        }, 0)
-        return total
-    }
+            cart.forEach((item) => {
+                let itemValue = Number(item.value);
+                let itemQuantity = Number(item.quantity);
+
+                for (let i = 0; i < itemQuantity; i++) {
+                    if (!firstApplied) {
+                        total += itemValue;
+                        firstApplied = true;
+                    } else {
+                        total += itemValue * 0.8;
+                    }
+                }
+            });
+        } else {
+            total = cart.reduce((sum, item) => sum + item.value * item.quantity, 0);
+        }
+        return total;
+    };
+
 
     const totalWithDiscount = valueDiscount(cart)
 
