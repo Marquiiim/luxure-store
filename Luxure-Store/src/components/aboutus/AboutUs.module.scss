@@ -10,6 +10,16 @@
     height: 100vh;
     width: 100%;
 
+    @include mobile {
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    @include tablet {
+        height: auto;
+        padding: 2rem 0;
+    }
+
     & .blur_aboutus {
         background-image: url('../../assets/img/LuxureWPP2.jpg');
         background-repeat: no-repeat;
@@ -36,7 +46,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10rem;
+            gap: 5rem;
             height: 50%;
 
             & .text_left {
@@ -64,17 +74,17 @@
 
         & .division {
             position: absolute;
-            top: 47%;
             width: 50%;
             height: 0.7px;
             background-color: white;
+            margin: 1.5rem 0;
         }
 
         & .bottom_info {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10rem;
+            gap: 5rem;
             height: 50%;
 
             & .text_right {

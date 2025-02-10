@@ -1,0 +1,119 @@
+@include tablet {
+    .container {
+        padding: 2rem;
+        height: auto;
+
+        .blur_aboutus {
+            filter: blur(3px);
+        }
+
+        .content {
+            gap: 2.5rem;
+
+            .top_info,
+            .bottom_info {
+                gap: 3rem;
+                padding: 1.5rem;
+
+                .text_left,
+                .text_right {
+                    width: 45%;
+
+                    p {
+                        font-size: 1.4rem;
+                        line-height: 1.6;
+                        padding: 0 1rem;
+                    }
+                }
+
+                img {
+                    height: 200px;
+                    width: auto;
+                    transform: rotate(0deg);
+                    filter: drop-shadow(0px 0px 60px #00bfff98);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 776px) {
+    .container {
+        .content {
+            gap: 1rem;
+
+            .top_info,
+            .bottom_info {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+
+                .text_left,
+                .text_right {
+                    width: 90%;
+                }
+
+                img {
+                    height: 150px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        height: auto; // Altura automática para evitar cortes
+        padding: 1rem 0; // Adiciona espaço interno
+        overflow: visible; // Garante que o conteúdo não seja cortado
+    }
+
+    .content {
+        gap: 1rem; // Reduz o espaçamento entre os blocos
+        padding: 0 1rem; // Adiciona espaço nas laterais do conteúdo
+    }
+
+    .top_info, .bottom_info {
+        flex-direction: column; // Disposição em coluna
+        gap: 1rem; // Espaçamento entre texto e imagem
+        text-align: center; // Centraliza o texto
+        width: 100%; // Ocupa toda a largura disponível
+    }
+
+    .text_left, .text_right {
+        width: 100%; // Ocupa toda a largura disponível
+
+        p {
+            font-size: 1.2rem; // Reduz o tamanho da fonte
+            line-height: 1.5; // Melhora a legibilidade
+            padding: 0; // Remove o padding lateral
+        }
+    }
+
+    .top_info img, .bottom_info img {
+        height: 130px; // Reduz o tamanho da imagem
+        transform: rotate(0deg); // Remove a rotação
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        .content {
+            gap: 0.5rem;
+
+            .top_info,
+            .bottom_info {
+                gap: 1rem;
+
+                .text_left,
+                .text_right {
+                    width: 95%;
+                }
+
+                img {
+                    height: 120px;
+                }
+            }
+        }
+    }
+}

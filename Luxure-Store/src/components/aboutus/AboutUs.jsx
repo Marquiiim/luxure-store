@@ -10,7 +10,6 @@ function AboutUs() {
         <section className={styles.container}>
             <div className={styles.blur_aboutus}></div>
             <div className={styles.content}>
-                <div className={styles.division}></div>
                 <div className={styles.top_info}>
                     <div className={styles.text_left}>
                         <p>
@@ -19,8 +18,6 @@ function AboutUs() {
                     </div>
                     <img src={RelogioTop} />
                 </div>
-
-                
 
                 <div className={styles.bottom_info}>
                     <img src={RelogioBottom} />
