@@ -16,23 +16,23 @@
             0 0 20px 6px #00bfff83,
     }
 
-    & img {
+    img {
         width: auto;
         height: 200px;
     }
 
 
-    & .name_and_price {
+    .name_and_price {
         display: flex;
         flex-direction: column;
 
-        & .name_product {
+        .name_product {
             color: rgb(98, 98, 98);
             font-weight: 400;
             font-size: 1.5rem;
         }
 
-        & .promotion {
+        .promotion {
             & p {
                 color: rgb(179, 0, 0);
 
@@ -42,12 +42,12 @@
             }
         }
 
-        & .price {
+        .price {
             color: #0a9c03;
             font-size: 1.6rem;
             font-weight: 600;
 
-            & span {
+            span {
                 position: relative;
                 top: -20%;
                 font-size: 15px;
@@ -55,7 +55,7 @@
         }
     }
 
-    & button {
+    button {
         background-color: #00bfff98;
         color: white;
         padding: .7rem;

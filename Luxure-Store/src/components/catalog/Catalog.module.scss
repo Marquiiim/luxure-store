@@ -1,4 +1,4 @@
-@import './media.queries';
+@import 'media.queries';
 
 .container {
     display: flex;
@@ -7,8 +7,9 @@
     position: relative;
     font-family: "Oswald", serif;
     height: 100vh;
+    width: 100%;
 
-    & .blur_catalog {
+    .blur_catalog {
         background-image: url('../../assets/img/LuxureWPP2.jpg');
         background-repeat: no-repeat;
         background-position: center;
@@ -22,24 +23,33 @@
         z-index: 1;
     }
 
-    & .content {
+    .content {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         gap: 2rem;
 
-        & .navigator_catalog {
+        .navigator_catalog {
             position: relative;
             z-index: 2;
         }
 
-        & .poedegar_deluxe_session {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            position: relative;
-            gap: 1.5rem;
+        .poedegar_deluxe_session {
             z-index: 2;
+
+            .session_name {
+                font-size: 1.5rem;
+                color: white;
+                padding: 1rem;
+            }
+
+            .watches_poedegar {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                position: relative;
+                gap: 1.5rem;
+            }
         }
     }
 }

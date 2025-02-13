@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom'
 import { useState } from 'react'
 
 import Presentation from "./components/presentation/Presentation"
@@ -8,18 +8,9 @@ import Cart from "./components/catalog/cart/Cart"
 
 function App() {
     const [cart, setCart] = useState([])
-    const [showCart, setShowCart] = useState(false)
 
     const addToCart = (item) => {
         setCart([...cart, { ...item, quantity: 1 }])
-    }
-
-    const openCart = () => {
-        setShowCart(true)
-    }
-
-    const closeCart = () => {
-        setShowCart(false)
     }
 
     const removeToCart = (index) => {
@@ -37,15 +28,14 @@ function App() {
     }
 
     return (
-        <Router>
-            <div>
-                <Presentation />
-                <AboutUs />
-                <Catalog cart={cart} addToCart={addToCart} openCart={openCart} />
-
-                {showCart && <Cart cart={cart} removeToCart={removeToCart} closeCart={closeCart} updateQuantity={updateQuantity} />}
-            </div>
-        </Router>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Presentation />} />
+                <Route path='/sobrenos' element={<AboutUs />} />
+                <Route path='/catalogo' element={<Catalog cart={cart} addToCart={addToCart} />} />
+                <Route path='/carrinho' element={<Cart cart={cart} removeToCart={removeToCart} updateQuantity={updateQuantity} />} />
+            </Routes>
+        </BrowserRouter>
     )
 }
 

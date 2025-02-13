@@ -2,8 +2,9 @@ import styles from './Cart.module.css'
 
 import { FaTrashAlt } from "react-icons/fa";
 import { FaExclamation } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
-function Cart({ cart, closeCart, updateQuantity, removeToCart }) {
+function Cart({ cart, updateQuantity, removeToCart }) {
 
     const convertValue = (value) => {
         return new Intl.NumberFormat('pt-BR', {
@@ -99,7 +100,9 @@ function Cart({ cart, closeCart, updateQuantity, removeToCart }) {
                         )}
                     </div>
                     <div className={styles.actions_cart}>
-                        <button onClick={closeCart}>Voltar</button>
+                        <Link to="/catalogo">
+                            Voltar
+                        </Link>
                         {cart.length === 0 ? '' :
                             <button>Finalizar compra</button>}
                     </div>

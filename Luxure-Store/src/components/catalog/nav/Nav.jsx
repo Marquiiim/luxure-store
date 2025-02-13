@@ -1,15 +1,35 @@
-import styles from './Nav.module.css'
+import styles from './Nav.module.css';
 
 import { TiShoppingCart } from "react-icons/ti";
+
+import { Link } from 'react-router-dom';
 
 function Nav({ cart, openCart }) {
     return (
         <nav>
-            <div className={styles.title_nav}>
+            <ul>
+                <li>
+                    <Link to="/" >
+                        Inicio
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/sobrenos" >
+                        Sobre Nós
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/catalogo" >
+                        Catálogo
+                    </Link>
+                </li>
+            </ul>
+
+            <div className={styles.catalog_options}>
                 <h1>Catálogo</h1>
-            </div>
-            <div className={styles.cart}>
-                <span onClick={openCart}>Carrinho ({cart ? cart.length : 0}) <TiShoppingCart /></span>
+                <Link to="/carrinho">
+                    Carrinho ({cart ? cart.length : 0}) <TiShoppingCart />
+                </Link>
             </div>
         </nav>
     )

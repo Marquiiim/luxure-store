@@ -2,35 +2,52 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  flex-direction: column;
   width: 100%;
-  height: 60px;
-  margin-bottom: 5rem;
+  gap: 2rem;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  font-size: 1.7rem;
   color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s border ease-in-out;
 }
-nav .title_nav {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+nav ul li a:hover {
+  border-bottom: 3px solid rgba(0, 191, 255, 0.5960784314);
 }
-nav .title_nav h1 {
+nav .catalog_options {
+  display: flex;
+  gap: 2rem;
+}
+nav .catalog_options h1 {
+  color: white;
   font-size: 2.5rem;
 }
-nav .cart {
-  position: absolute;
-  left: 300px;
-  width: 130px;
-}
-nav .cart span {
+nav .catalog_options a {
   display: flex;
+  justify-content: center;
   align-items: center;
+  text-decoration: none;
   gap: 0.5rem;
   padding: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  color: white;
   border-bottom: 2px solid transparent;
   transition: 0.3s border ease-in-out;
   cursor: pointer;
 }
-nav .cart span:hover {
+nav .catalog_options a:hover {
   border-bottom: 2px solid rgba(0, 191, 255, 0.5960784314);
 }/*# sourceMappingURL=Nav.module.css.map */

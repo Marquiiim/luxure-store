@@ -5,6 +5,7 @@
   position: relative;
   font-family: "Oswald", serif;
   height: 100vh;
+  width: 100%;
 }
 .container .blur_catalog {
   background-image: url("../../assets/img/LuxureWPP2.jpg");
@@ -31,9 +32,16 @@
   z-index: 2;
 }
 .container .content .poedegar_deluxe_session {
+  z-index: 2;
+}
+.container .content .poedegar_deluxe_session .session_name {
+  font-size: 1.5rem;
+  color: white;
+  padding: 1rem;
+}
+.container .content .poedegar_deluxe_session .watches_poedegar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
   gap: 1.5rem;
-  z-index: 2;
 }/*# sourceMappingURL=Catalog.module.css.map */

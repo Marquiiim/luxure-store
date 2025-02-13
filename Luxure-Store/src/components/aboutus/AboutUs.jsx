@@ -3,6 +3,8 @@ import styles from './AboutUs.module.css'
 import RelogioTop from '../../assets/img/RelógioLuxure1.png'
 import RelogioBottom from '../../assets/img/RelógioLuxure2.png'
 
+import { Link } from 'react-router-dom'
+
 
 function AboutUs() {
 
@@ -10,6 +12,23 @@ function AboutUs() {
         <section className={styles.container}>
             <div className={styles.blur_aboutus}></div>
             <div className={styles.content}>
+                <ul>
+                    <li>
+                        <Link to="/" >
+                            Inicio
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/sobrenos" >
+                            Sobre Nós
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/catalogo" >
+                            Catálogo
+                        </Link>
+                    </li>
+                </ul>
                 <div className={styles.top_info}>
                     <div className={styles.text_left}>
                         <p>

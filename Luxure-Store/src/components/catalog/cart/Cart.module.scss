@@ -12,11 +12,11 @@
     background-color: rgb(230, 230, 230);
     font-family: "Poppins", serif;
 
-    & h2 {
+    h2 {
         font-size: 2rem;
     }
 
-    & .modal_content {
+    .modal_content {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -25,7 +25,7 @@
         padding: 2rem;
         gap: 3rem;
 
-        & p {
+        p {
             color: red;
             background-color: rgba(255, 0, 0, 0.279);
             border-radius: .5rem;
@@ -34,7 +34,7 @@
             font-weight: bold;
         }
 
-        & .products {
+        .products {
             background-color: rgb(255, 255, 255);
             padding: 2rem;
             border-radius: .5rem;
@@ -43,25 +43,25 @@
             overflow-y: auto;
             text-align: center;
 
-            & .list_products {
+            .list_products {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
 
-                & .info_list {
+                .info_list {
                     display: flex;
                     justify-content: space-around;
                     width: 100%;
                     list-style: none;
 
-                    & li {
+                    li {
                         color: rgb(168, 168, 168);
                         font-weight: bold;
                     }
                 }
 
-                & .product {
+                .product {
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
@@ -69,18 +69,18 @@
                     padding-bottom: 1.5rem;
                     border-bottom: 1.5px solid rgb(230, 230, 230);
 
-                    & .characteristics {
+                    .characteristics {
                         display: flex;
                         justify-content: space-around;
                         align-items: center;
                         width: 100%;
 
-                        & .name {
+                        .name {
                             font-weight: 400;
                         }
 
 
-                        & .amount {
+                        .amount {
                             padding: .5rem;
                             border-radius: .3rem;
                             width: 3rem;
@@ -89,11 +89,11 @@
                             text-align: center;
                         }
 
-                        & .value {
+                        .value {
                             font-weight: bold;
                         }
 
-                        & .trash {
+                        .trash {
                             color: rgb(168, 168, 168);
                             cursor: pointer;
 
@@ -107,7 +107,7 @@
                         }
                     }
 
-                    & img {
+                    img {
                         height: auto;
                         width: 60px;
                     }
@@ -115,7 +115,7 @@
             }
         }
 
-        & .buy {
+        .buy {
             background-color: rgb(255, 255, 255);
             padding: 2rem;
             border-radius: .5rem;
@@ -123,20 +123,20 @@
             max-height: 50vh;
             text-align: center;
 
-            & .values {
+            .values {
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
 
-                & .promotion {
+                .promotion {
 
-                    & span {
+                    span {
                         color: #00bfff98;
                         font-weight: bold;
                     }
                 }
 
-                & .total {
+                .total {
                     display: flex;
                     flex-direction: column;
                     gap: 1rem;
@@ -144,16 +144,16 @@
                     font-size: 1.2rem;
                     font-weight: bold;
 
-                    & .text_payable {
+                    .text_payable {
                         font-weight: bold;
 
-                        & .total_payable {
+                        .total_payable {
                             font-weight: 500;
                             color: black;
                         }
                     }
 
-                    & .discount {
+                    .discount {
                         border-radius: .5rem;
                         padding: .6rem;
                         background-color: #0b9c0375;
@@ -169,13 +169,16 @@
                 gap: 1rem;
                 margin-top: 2rem;
 
-                & button {
+                & a,
+                button {
                     background-color: #00bfff98;
                     color: white;
+                    text-decoration: none;
                     padding: .7rem;
                     border-radius: .7rem;
                     border: none;
                     font-weight: bold;
+                    font-size: .9rem;
                     cursor: pointer;
 
                     &:hover {
@@ -185,6 +188,8 @@
                     &:active {
                         opacity: 0.8;
                     }
+
+
                 }
             }
 

@@ -144,18 +144,23 @@
   gap: 1rem;
   margin-top: 2rem;
 }
+.modal .modal_content .buy .actions_cart a,
 .modal .modal_content .buy .actions_cart button {
   background-color: rgba(0, 191, 255, 0.5960784314);
   color: white;
+  text-decoration: none;
   padding: 0.7rem;
   border-radius: 0.7rem;
   border: none;
   font-weight: bold;
+  font-size: 0.9rem;
   cursor: pointer;
 }
+.modal .modal_content .buy .actions_cart a:hover,
 .modal .modal_content .buy .actions_cart button:hover {
   opacity: 0.9;
 }
+.modal .modal_content .buy .actions_cart a:active,
 .modal .modal_content .buy .actions_cart button:active {
   opacity: 0.8;
 }
