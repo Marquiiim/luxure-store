@@ -91,11 +91,4 @@
 .container .content .top_info.bottom_info img,
 .container .content .bottom_info.bottom_info img {
   transform: rotate(-15deg);
-}
-.container .content .division {
-  position: absolute;
-  width: 50%;
-  height: 0.7px;
-  background-color: white;
-  margin: 1.5rem 0;
 }/*# sourceMappingURL=AboutUs.module.css.map */

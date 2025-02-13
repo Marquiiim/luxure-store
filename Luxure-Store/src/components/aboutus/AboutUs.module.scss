@@ -1,4 +1,4 @@
-@import './media.queries';
+@import './media-queries';
 
 .container {
     display: flex;
@@ -93,14 +93,6 @@
             &.bottom_info img {
                 transform: rotate(-15deg);
             }
-        }
-
-        .division {
-            position: absolute;
-            width: 50%;
-            height: 0.7px;
-            background-color: white;
-            margin: 1.5rem 0;
         }
     }
 }
