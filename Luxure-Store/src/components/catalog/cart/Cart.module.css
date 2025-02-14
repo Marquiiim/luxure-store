@@ -3,13 +3,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: rgb(230, 230, 230);
   font-family: "Poppins", serif;
+  min-height: 100vh;
   padding: 1rem;
 }
 .container h2 {
@@ -21,6 +17,7 @@
   justify-content: center;
   align-items: flex-start;
   width: 100%;
+  height: 100%;
   max-width: 1200px;
   gap: 2rem;
 }
