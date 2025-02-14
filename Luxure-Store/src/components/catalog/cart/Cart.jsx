@@ -39,8 +39,23 @@ function Cart({ cart, updateQuantity, removeToCart }) {
         return total;
     };
 
-
     const totalWithDiscount = valueDiscount(cart)
+
+    const finalizePurchase = () => {
+        let message = "Olá, gostaria de finalizar a compra com os seguintes itens da loja:\n\n"
+
+        cart.forEach((item) => {
+            message += ` - ${item.name} | Quantidade: ${item.quantity} | Valor: ${convertValue(item.value * item.quantity)}\n`
+        })
+
+        message += `\n Valor Total: ${convertValue(totalWithDiscount)}`
+
+        const codedMessage = encodeURIComponent(message)
+
+        const linkWhatsApp = `https://wa.me/5585921583099?text=${codedMessage}`
+
+        window.location.href = linkWhatsApp
+    }
 
 
     return (
@@ -104,7 +119,7 @@ function Cart({ cart, updateQuantity, removeToCart }) {
                             Voltar
                         </Link>
                         {cart.length === 0 ? '' :
-                            <button>Finalizar compra</button>}
+                            <button onClick={finalizePurchase}>Finalizar compra</button>}
                     </div>
                     <span className={styles.help}>A compra é finalizada com atendente<FaExclamation /></span>
                 </div>
