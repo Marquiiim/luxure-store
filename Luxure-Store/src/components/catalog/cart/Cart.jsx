@@ -44,9 +44,9 @@ function Cart({ cart, updateQuantity, removeToCart }) {
 
 
     return (
-        <div className={styles.modal}>
+        <div className={styles.container}>
             <h2>Carrinho de Compras</h2>
-            <div className={styles.modal_content}>
+            <div className={styles.content}>
                 <div className={styles.products}>
                     {cart.length === 0 ? (
                         <p>Seu carrinho está vazio.</p>
