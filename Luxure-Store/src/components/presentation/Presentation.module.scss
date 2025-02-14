@@ -10,10 +10,7 @@
     width: 100%;
 
     .blur {
-        background-image: url('../../assets/img/LuxureWPP.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        background: url('../../assets/img/LuxureWPP.jpg') center/cover no-repeat;
         position: absolute;
         filter: blur(4px);
         top: 0;
@@ -50,10 +47,11 @@
         ul {
             display: flex;
             justify-content: center;
-            width: 70%;
+            align-items: center;
+            flex-wrap: wrap;
             padding: 1rem;
+            gap: 1.5rem;
             opacity: 0;
-            gap: 2rem;
             animation: slide-in 1.3s ease-in-out forwards;
             animation-delay: 1.5s;
 
@@ -61,7 +59,7 @@
                 list-style: none;
 
                 a {
-                    font-size: 1.7rem;
+                    font-size: 1.5rem;
                     font-family: "Oswald", serif;
                     color: white;
                     text-decoration: none;
@@ -75,5 +73,6 @@
                 }
             }
         }
+
     }
 }

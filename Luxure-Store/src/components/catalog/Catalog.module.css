@@ -4,14 +4,12 @@
   align-items: center;
   position: relative;
   font-family: "Oswald", serif;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
+  overflow-y: auto;
 }
 .container .blur_catalog {
-  background-image: url("../../assets/img/LuxureWPP2.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: url("../../assets/img/LuxureWPP2.jpg") center/cover no-repeat;
   position: absolute;
   filter: blur(4px);
   top: 0;
@@ -26,22 +24,32 @@
   align-items: center;
   flex-direction: column;
   gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  z-index: 2;
 }
 .container .content .navigator_catalog {
-  position: relative;
-  z-index: 2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .container .content .poedegar_deluxe_session {
-  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .container .content .poedegar_deluxe_session .session_name {
   font-size: 1.5rem;
   color: white;
   padding: 1rem;
+  text-align: center;
 }
 .container .content .poedegar_deluxe_session .watches_poedegar {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
 }/*# sourceMappingURL=Catalog.module.css.map */

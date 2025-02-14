@@ -7,14 +7,12 @@
     position: relative;
     overflow: hidden;
     font-family: "Oswald", serif;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
+    overflow-y: auto;
 
     .blur_aboutus {
-        background-image: url('../../assets/img/LuxureWPP2.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        background: url('../../assets/img/LuxureWPP2.jpg') center/cover no-repeat;
         position: absolute;
         filter: blur(4px);
         top: 0;
@@ -35,14 +33,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
             padding: 1rem;
-            gap: 2rem;
+            gap: 1.5rem;
 
             li {
                 list-style: none;
 
                 a {
-                    font-size: 1.7rem;
+                    font-size: 1.5rem;
                     color: white;
                     text-decoration: none;
                     padding: .5rem;

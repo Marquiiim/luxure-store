@@ -5,19 +5,21 @@ nav {
   flex-direction: column;
   width: 100%;
   gap: 2rem;
+  padding: 1rem;
 }
 nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding: 1rem;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 nav ul li {
   list-style: none;
 }
 nav ul li a {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: white;
   text-decoration: none;
   padding: 0.5rem;
@@ -29,11 +31,14 @@ nav ul li a:hover {
 }
 nav .catalog_options {
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 nav .catalog_options h1 {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  text-align: center;
 }
 nav .catalog_options a {
   display: flex;
@@ -42,7 +47,7 @@ nav .catalog_options a {
   text-decoration: none;
   gap: 0.5rem;
   padding: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
   border-bottom: 2px solid transparent;
   transition: 0.3s border ease-in-out;

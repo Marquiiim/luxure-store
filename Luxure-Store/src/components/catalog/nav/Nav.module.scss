@@ -1,3 +1,5 @@
+@import '../media-queries';
+
 nav {
     display: flex;
     justify-content: center;
@@ -5,19 +7,21 @@ nav {
     flex-direction: column;
     width: 100%;
     gap: 2rem;
+    padding: 1rem;
 
     ul {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         padding: 1rem;
-        gap: 2rem;
+        gap: 1.5rem;
 
         li {
             list-style: none;
 
             a {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
                 color: white;
                 text-decoration: none;
                 padding: .5rem;
@@ -33,11 +37,14 @@ nav {
 
     .catalog_options {
         display: flex;
-        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
 
         h1 {
             color: white;
-            font-size: 2.5rem;
+            font-size: 2rem;
+            text-align: center;
         }
 
         a {
@@ -47,7 +54,7 @@ nav {
             text-decoration: none;
             gap: .5rem;
             padding: .5rem;
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: white;
             border-bottom: 2px solid transparent;
             transition: 0.3s border ease-in-out;
