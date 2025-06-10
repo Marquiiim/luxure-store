@@ -28,14 +28,14 @@ function App() {
     }
 
     return (
-        <BrowserRouter basename='/luxure-store'>
+        <Router basename='/luxure-store'>
             <Routes>
                 <Route path='/' element={<Presentation />} />
                 <Route path='/sobrenos' element={<AboutUs />} />
                 <Route path='/catalogo' element={<Catalog cart={cart} addToCart={addToCart} />} />
                 <Route path='/carrinho' element={<Cart cart={cart} removeToCart={removeToCart} updateQuantity={updateQuantity} />} />
             </Routes>
-        </BrowserRouter>
+        </Router>
     )
 }
 
