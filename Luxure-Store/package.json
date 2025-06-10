@@ -1,8 +1,8 @@
 {
+  "homepage": "https://Marquiiim.github.io/luxure-store",
   "name": "luxure-store",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Marquiiim.github.io/luxure-store",
   "type": "module",
   "scripts": {
     "dev": "vite",
