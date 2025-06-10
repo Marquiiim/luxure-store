@@ -28,7 +28,7 @@ function App() {
     }
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename='/luxure-store'>
             <Routes>
                 <Route path='/' element={<Presentation />} />
                 <Route path='/sobrenos' element={<AboutUs />} />
