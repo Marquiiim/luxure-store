@@ -1,56 +1,36 @@
-# 🛍️ LUXURE STORE – Plataforma de Venda Virtual
+## 🛍️ Luxure Store – Plataforma de Venda Virtual (Maracanaú/CE)
 
-Este projeto marca um momento especial na minha trajetória: foi o **meu primeiro projeto desenvolvido para uma loja real**, a **Luxure Store**, localizada em **Maracanaú**, e **foi efetivamente utilizado pela loja** como sua plataforma de vendas online.
+### 🧾 Descrição
 
----
+A **Luxure Store** é uma plataforma de vendas online desenvolvida para uma loja física real localizada em **Maracanaú/CE**. O objetivo deste projeto foi aplicar e expandir meus conhecimentos em **desenvolvimento web**, enfrentando desafios práticos relacionados a **lógica de negócio em JavaScript** e **responsividade para dispositivos móveis**.
 
-## 💡 Objetivo
+### 🧩 Funcionalidades
 
-Desenvolver um **site funcional e responsivo** para vendas online, aplicando conhecimentos em **desenvolvimento web moderno**, com foco em interatividade, usabilidade e integração com ferramentas de comunicação.
+* 🛒 **Carrinho de compras dinâmico** com:
 
----
+  * Listagem de produtos com nome, preço e características
+  * Cálculo automático do valor total
+  * Aplicação de **descontos por quantidade**
+* 📲 **Integração com WhatsApp**:
 
-## ⚙️ Funcionalidades Implementadas
+  * Geração automática de mensagem com os dados do carrinho
+  * Redirecionamento direto para conversa com o vendedor
 
-* 🛒 **Carrinho de compras dinâmico**
+### 🛠️ Tecnologias Utilizadas
 
-  * Exibição em tempo real de produtos selecionados: nome, preço e características
-  * Cálculo automático do valor total da compra
-  * Aplicação de **descontos progressivos** com base na quantidade de produtos
+* React.js
+* JavaScript
+* Sass
+* CSS3
+* HTML5
 
-* 📲 **Integração com WhatsApp**
+### 🚀 Diferenciais do Projeto
 
-  * Redirecionamento automatizado para o WhatsApp com todos os detalhes do carrinho
-  * Facilita a comunicação direta entre cliente e loja para concluir o pedido
-
-* 📱 **Responsividade completa**
-
-  * Interface adaptada para dispositivos móveis, garantindo uma navegação fluida e acessível em qualquer tamanho de tela
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-* ✅ **React.js** – Biblioteca JavaScript para construção da interface
-* ✅ **JavaScript (ES6+)** – Lógica de interação e dinamicidade
-* ✅ **Sass** – Estilização modular com uso de variáveis e mixins
-* ✅ **CSS3** – Design e responsividade
-* ✅ **HTML5** – Estrutura semântica da aplicação
+* 🧠 Lógica de manipulação de carrinho feita 100% em JavaScript
+* 📱 Interface **totalmente responsiva**, adaptável a diferentes tamanhos de tela
+* 🔗 Integração direta com **WhatsApp** para facilitar o processo de compra
+* 🧩 Estrutura modular de componentes com **React**, facilitando a manutenção e evolução do sistema
 
 ---
 
-## 📈 Impacto e Aprendizados
-
-Este foi um grande passo na minha formação como desenvolvedor. Foi **o primeiro projeto que criei para um cliente real**, enfrentando desafios de:
-
-* Lógica e manipulação de estado no React
-* Otimização de layout para diferentes dispositivos
-* Comunicação com clientes reais e adaptação de funcionalidades conforme a necessidade da loja
-
----
-
-## 🧠 O que aprendi com o projeto
-
-* A importância da **usabilidade e responsividade** em uma aplicação comercial
-* Como trabalhar com **clientes reais e requisitos do mundo real**
-* Boas práticas na **manipulação de dados e integração com ferramentas externas** (como o WhatsApp)
+Este projeto foi um marco importante no meu desenvolvimento como **dev frontend**, pois uniu design responsivo, lógica de negócios e integração com canais reais de atendimento ao cliente.
